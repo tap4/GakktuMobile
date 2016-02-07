@@ -18,6 +18,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MentorActivity"
+            android:label="@string/title_activity_mentor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SurveyActivity"
+            android:label="@string/title_activity_survey"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArticlesActivity"
+            android:label="@string/title_activity_articles"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LogInActivity"
+            android:label="@string/title_activity_log_in"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

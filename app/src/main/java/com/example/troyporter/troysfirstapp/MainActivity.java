@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +26,42 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Log.i(TAG, "onCreate");
 
+        //User Navigation to other Activities (hopefully...)
+        Button mentorButton = (Button)findViewById(R.id.mentorButton);
+        mentorButton.setOnClickListener(new View.OnClickListener() {
+                                            public void onClick(View v) {
+                                                //TextView buttonTestText = (TextView) findViewById(R.id.buttonTestText);
+                                                //buttonTestText.setText("Mentor Button Pressed");
+                                                startActivity(new Intent(MainActivity.this, MentorActivity.class));
+                                            }
+                                        }
+        );
+
+        Button surveyButton = (Button)findViewById(R.id.surveyButton);
+        surveyButton.setOnClickListener(new View.OnClickListener(){
+                                            public void onClick(View v){
+                                                startActivity(new Intent(MainActivity.this, SurveyActivity.class));
+                                            }
+                                        }
+        );
+
+        Button articlesButton = (Button)findViewById(R.id.articlesButton);
+        articlesButton.setOnClickListener(new View.OnClickListener(){
+                                            public void onClick(View v){
+                                                startActivity(new Intent(MainActivity.this, ArticlesActivity.class));
+                                            }
+                                        }
+        );
+
+        Button logInButton = (Button)findViewById(R.id.logInButton);
+        logInButton.setOnClickListener(new View.OnClickListener(){
+                                              public void onClick(View v){
+                                                  startActivity(new Intent(MainActivity.this, LogInActivity.class));
+                                              }
+                                          }
+        );
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onStart() {

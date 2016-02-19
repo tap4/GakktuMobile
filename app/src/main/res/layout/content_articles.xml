@@ -13,10 +13,6 @@
     tools:showIn="@layout/activity_articles"
     android:background="#bf98ee">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,5 +20,15 @@
             android:text="@string/articles_page_intro"
             android:id="@+id/textView3"
             android:background="#f7f0a1" />
-    </GridLayout>
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.example.troyporter.troysfirstapp.NavigationBarFragment"
+        android:id="@+id/fragment4"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        tools:layout="@layout/navigation_bar_fragment" />
+
 </RelativeLayout>

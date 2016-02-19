@@ -24,4 +24,15 @@
         android:layout_centerHorizontal="true"
         android:textSize="30dp" />
 
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.example.troyporter.troysfirstapp.NavigationBarFragment"
+        android:id="@+id/fragment"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="107dp"
+        tools:layout="@layout/navigation_bar_fragment" />
+
 </RelativeLayout>

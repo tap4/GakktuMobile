@@ -26,12 +26,10 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Log.i(TAG, "onCreate");
 
-        //User Navigation to other Activities (hopefully...)
+        //User Navigation to other Activities
         Button mentorButton = (Button)findViewById(R.id.mentorButton);
         mentorButton.setOnClickListener(new View.OnClickListener() {
                                             public void onClick(View v) {
-                                                //TextView buttonTestText = (TextView) findViewById(R.id.buttonTestText);
-                                                //buttonTestText.setText("Mentor Button Pressed");
                                                 startActivity(new Intent(MainActivity.this, MentorActivity.class));
                                             }
                                         }

@@ -26,7 +26,7 @@ public class NavigationBarFragment extends Fragment{
     @Override
     public void onDetach(){
         super.onDetach();
-        //We are leaving this activity, to remove our record
+        //We are leaving this activity, so we can remove our record of this activity
         parentActivityContext = null;
     }
     @Nullable
@@ -34,7 +34,14 @@ public class NavigationBarFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.navigation_bar_fragment, container, false);
 
+        //Declare all buttons
         final Button homeButton = (Button) view.findViewById(R.id.navBarButton_home);
+        final Button forumButton = (Button) view.findViewById(R.id.navBarButton_forum);
+        final Button mentorButton = (Button) view.findViewById(R.id.navBarButton_mentors);
+        final Button articlesButton= (Button) view.findViewById(R.id.navBarButton_articles);
+        final Button profileButton= (Button) view.findViewById(R.id.navBarButton_userProfile);
+
+        //Set all Listeners for the buttons using our saved record/context of current activity
         homeButton.setOnClickListener(new View.OnClickListener() {
                                           public void onClick(View v) {
                                               startActivity(new Intent(parentActivityContext, MainActivity.class));
@@ -42,8 +49,39 @@ public class NavigationBarFragment extends Fragment{
                                       }
         );
 
-        return view;
+        forumButton.setOnClickListener(new View.OnClickListener() {
+                                          public void onClick(View v) {
+                                              //We dont have Forum Activity yet, so this links back to home for now.
+                                              //This should be corrected when we have Forum ready.
+                                              startActivity(new Intent(parentActivityContext, MainActivity.class));
+                                          }
+                                      }
+        );
 
+        mentorButton.setOnClickListener(new View.OnClickListener() {
+                                          public void onClick(View v) {
+                                              startActivity(new Intent(parentActivityContext, MentorActivity.class));
+                                          }
+                                      }
+        );
+
+        articlesButton.setOnClickListener(new View.OnClickListener() {
+                                          public void onClick(View v) {
+                                              startActivity(new Intent(parentActivityContext, ArticlesActivity.class));
+                                          }
+                                      }
+        );
+
+        profileButton.setOnClickListener(new View.OnClickListener() {
+                                          public void onClick(View v) {
+                                              //We dont have Profile Activity yet, so this links to LogIn for now.
+                                              //This should be corrected when we have Profile Activity ready.
+                                              startActivity(new Intent(parentActivityContext, LogInActivity.class));
+                                          }
+                                      }
+        );
+
+        return view;
 
     }
 }

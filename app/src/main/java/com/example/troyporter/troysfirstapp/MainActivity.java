@@ -70,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    //These overrides are just helping us understand when each stage of the activity lifecycle occurs.
+    //Eventually, we should delete these, before we submit project.  But, probably o.k. to leave here for now.
     @Override
     protected void onStart() {
         super.onStart();

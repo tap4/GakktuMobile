@@ -1,24 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/red"
     >
-    
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="A Fragment for a Nav Bar"
-        android:background="@color/yellow"
-        android:id="@+id/textView6" />
-
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
+        android:textSize="11dp"
         android:id="@+id/navBarButton_home"
-        android:layout_below="@+id/textView6"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forum"
+        android:textSize="11dp"
+        android:id="@+id/navBarButton_forum"
+        android:layout_toRightOf="@+id/navBarButton_home"
+        android:layout_toEndOf="@+id/navBarButton_home" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Articles"
+        android:textSize="11dp"
+        android:id="@+id/navBarButton_articles"
+        android:layout_toRightOf="@+id/navBarButton_forum"
+        android:layout_toEndOf="@+id/navBarButton_forum" />
+
+    <Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Mentors"
+        android:textSize="11dp"
+    android:id="@+id/navBarButton_mentors"
+        android:layout_toRightOf="@+id/navBarButton_articles"
+        android:layout_toEndOf="@+id/navBarButton_articles" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="11dp"
+        android:id="@+id/navBarButton_userProfile"
+        android:layout_toRightOf="@+id/navBarButton_mentors"
+        android:layout_toEndOf="@+id/navBarButton_mentors" />
 
 </RelativeLayout>

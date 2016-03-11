@@ -13,15 +13,41 @@
     tools:showIn="@layout/activity_survey"
     android:background="#96f17a">
 
-    <!--Generic Text Placeholder for Survey Activity-->
+    <!--Here is where we will show each question of the survey-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/survey_page_intro"
-            android:id="@+id/introTextForSurvey"
+            android:id="@+id/survey_question_text_view"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/survey_yes_button"
+        android:text="@string/survey_yes_button_text"
+        android:layout_centerHorizontal="true"
+        android:background="@color/darkGreen"
+        android:layout_below="@id/survey_question_text_view"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/survey_no_button"
+        android:text="@string/survey_no_button_text"
+        android:layout_centerHorizontal="true"
+        android:background="@color/red"
+        android:layout_below="@id/survey_yes_button"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/survey_skip_button"
+        android:text="@string/survey_skip_button_text"
+        android:layout_centerHorizontal="true"
+        android:background="@color/yellow"
+        android:layout_below= "@id/survey_no_button"/>
 
     <!--Fragment for Navigation Bar-->
     <fragment
@@ -29,8 +55,6 @@
         android:layout_height="wrap_content"
         android:name="com.example.troyporter.troysfirstapp.NavigationBarFragment"
         android:id="@+id/fragment2"
-        android:layout_row="24"
-        android:layout_column="0"
         tools:layout="@layout/navigation_bar_fragment"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

@@ -6,14 +6,30 @@
     <string name="mentor_link_button_text">Mentors</string>
     <string name="survey_link_button_text">Survey</string>
     <string name="articles_link_button_text">Articles</string>
+    <string name="survey_yes_button_text">YES</string>
+    <string name="survey_no_button_text">NO</string>
+    <string name="survey_skip_button_text">SKIP</string>
     <string name="logIn_link_button_text">Log In</string>
     <string name="title_activity_survey">SurveyActivity</string>
     <string name="mentor_page_intro"> This is the Mentor Activity</string>
-    <string name="survey_page_intro"> Please take our survey...</string>
+    <string name="profile_page_intro_text"> This is your Profile</string>
+    <string name="survey_question_children">Do you have any children?</string>
+    <string name="survey_question_employed">Are you currently employed?</string>
+    <string name="survey_question_disabled">Are you (or a family member) disabled?</string>
+    <string name="survey_question_citizenship">Are you interested in a path to Icelandic citizenship?</string>
     <string name="articles_page_intro"> There are so many interesting articles to read here.</string>
     <string name="title_activity_articles">ArticlesActivity</string>
     <string name="title_activity_log_in">LogInActivity</string>
     <string name="logIn_button_text">Log In</string>
+    <string name="survey_question_text_view">TEST TEST TEST</string>
+    <string name="user_interest_level_children">1</string>
+    <string name="user_interest_level_disabled">1</string>
+    <string name="user_interest_level_employed">1</string>
+    <string name="user_interest_level_citizenship">1</string>
+    <string name="userProfilePreferences">userProfilePreferences</string>
+    <string name="user_pref_children_text">HELLO WORLD</string>
+    <string name="user_pref_children_label_text">CHILDREN:</string>
+    <string name="title_activity_profile">Profile</string>
 
 
 </resources>

@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.Context;
 
@@ -74,9 +73,7 @@ public class NavigationBarFragment extends Fragment{
 
         profileButton.setOnClickListener(new View.OnClickListener() {
                                           public void onClick(View v) {
-                                              //We dont have Profile Activity yet, so this links to LogIn for now.
-                                              //This should be corrected when we have Profile Activity ready.
-                                              startActivity(new Intent(parentActivityContext, LogInActivity.class));
+                                              startActivity(new Intent(parentActivityContext, ProfileActivity.class));
                                           }
                                       }
         );

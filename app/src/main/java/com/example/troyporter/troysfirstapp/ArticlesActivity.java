@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+
+//Pending. Have not worked on this Activity yet.  This is just a placeholder for now.
 public class ArticlesActivity extends FragmentActivity {
 
     @Override

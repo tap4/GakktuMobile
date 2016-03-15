@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
+import android.util.Log;
 
 
 public class SurveyActivity extends AppCompatActivity {
@@ -18,11 +19,7 @@ public class SurveyActivity extends AppCompatActivity {
     private Button mYesButton;
     private Button mNoButton;
     private Button mSkipButton;
-
-
-    //SharedPreferences sharedPref = getSharedPreferences(
-      //      getString(R.string.userProfilePreferences), Context.MODE_PRIVATE);
-    //SharedPreferences.Editor editor = sharedPref.edit();
+    private static final String TAG = "shared_pref_debug";
 
     //Array of the questions we will ask the User
     private Question[] mQuestionBank = new Question[]{
@@ -40,9 +37,13 @@ public class SurveyActivity extends AppCompatActivity {
     //Function to update User's SharedPref, based on their answers
     private void recordSurveyAnswer(int questionNumber, int answer)
     {
+
+        SharedPreferences prefs = getSharedPreferences(
+                getString(R.string.userProfilePreferences), Context.MODE_APPEND);
         String key = preferenceNames[questionNumber];
-       // editor.putInt(key, answer);
-       // editor.apply();
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(key, answer)
+                .apply();
 
     }
 

@@ -10,13 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.TextView;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "messageToTroy: ";
-
+    private static final String TAG = "messageToDebug: ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                                           }
         );
 
-
+        //Android put this in by default.  Anybody, remove it if you want.
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

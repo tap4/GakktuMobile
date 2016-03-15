@@ -40,7 +40,7 @@ public class NavigationBarFragment extends Fragment{
         final Button articlesButton= (Button) view.findViewById(R.id.navBarButton_articles);
         final Button profileButton= (Button) view.findViewById(R.id.navBarButton_userProfile);
 
-        //Set all Listeners for the buttons using our saved record/context of current activity
+        //Set all Listeners for the buttons using our saved context of current activity
         homeButton.setOnClickListener(new View.OnClickListener() {
                                           public void onClick(View v) {
                                               startActivity(new Intent(parentActivityContext, MainActivity.class));
@@ -50,7 +50,7 @@ public class NavigationBarFragment extends Fragment{
 
         forumButton.setOnClickListener(new View.OnClickListener() {
                                           public void onClick(View v) {
-                                              //We dont have Forum Activity yet, so this links back to home for now.
+                                              //We don't have Forum Activity yet, so this links back to home for now.
                                               //This should be corrected when we have Forum ready.
                                               startActivity(new Intent(parentActivityContext, MainActivity.class));
                                           }

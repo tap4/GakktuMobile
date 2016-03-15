@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -16,6 +17,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -23,13 +25,14 @@ public class ProfileActivity extends AppCompatActivity {
 
         mUserPreferenceChildrenTextView = (TextView) findViewById(R.id.user_pref_children_view);
 
+        //----Get the User's Profile Preferences from SharedPreferences File and display on screen---//
         SharedPreferences sharedPref = getSharedPreferences(
-                getString(R.string.userProfilePreferences), Context.MODE_PRIVATE);
+                getString(R.string.userProfilePreferences), Context.MODE_APPEND);
+        int childPrefValue =  sharedPref.getInt("children", 1);
+        mUserPreferenceChildrenTextView.setText(String.valueOf(childPrefValue));
+        //-------------------------------------------------------------------------------------//
 
-        String childPrefValue =  sharedPref.getString("children", "test");
-
-        mUserPreferenceChildrenTextView.setText(childPrefValue);
-
+        //Android put this here.  We can delete later if we dont want it.
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

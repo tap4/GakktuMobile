@@ -29,12 +29,14 @@ public class SurveyActivity extends AppCompatActivity {
             new Question(R.string.survey_question_citizenship)
     };
 
-    //Array of keys for our Shared Preferences
+    //Array of keys for our Shared Preferences (topics of interest)
     private String[] preferenceNames= new String[]{
         "children", "employed", "disabled", "citizenship"
     };
 
     //Function to update User's SharedPref, based on their answers
+    //Eventually, these preferences will be used in an algorithm to pre-sort all articles/information
+    //and present content to the User that is of most appropriate/interesting to him/her
     private void recordSurveyAnswer(int questionNumber, int answer)
     {
 
@@ -63,7 +65,7 @@ public class SurveyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //This button was programmed automatically by Android Studio. Feel free to delete/modify. -Troy
+        //---This button was programmed automatically by Android Studio. Feel free to delete/modify. -Troy ----//
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,15 +74,25 @@ public class SurveyActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        //-------------------------------------------------------------------------------------------------------//
 
         mSurveyQuestionTextView = (TextView) findViewById(R.id.survey_question_text_view);
+
+
+        /* We will use a 3-point scale for storing User's Preference/Interest in a topic:
+                0: User is NOT interested in this category
+                1: Unknown/User has not expressed an opinion about this category
+                2: User IS interested in this category.
+        */
 
         // ---------------------- YES BUTTON ------------------------------------------//
         mYesButton = (Button) findViewById(R.id.survey_yes_button);
         mYesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //YES, User is interested. Store value of 2
                 recordSurveyAnswer(mCurrentIndex,2);
+                //Increment to next question
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
                 updateQuestion();
             }
@@ -92,7 +104,9 @@ public class SurveyActivity extends AppCompatActivity {
         mNoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //NO, User is not interested. Store value of 0
                 recordSurveyAnswer(mCurrentIndex,0);
+                //Increment to next question
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
                 updateQuestion();
             }
@@ -104,7 +118,9 @@ public class SurveyActivity extends AppCompatActivity {
         mSkipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ////User is ambivalent. Store value of 1
                 recordSurveyAnswer(mCurrentIndex,1);
+                //Increment to next question
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
                 updateQuestion();
             }

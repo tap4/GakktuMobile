@@ -51,17 +51,17 @@ public class LogInActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error){
-                mTextView.setText("That didnt work!");
+                mTextView.setText("That didn't work!");
             }
         });
         //Add the request to the RequestQueue
         queue.add(stringRequest);
         */
 
-        final TextView mTxtDisplay;
+        //final TextView mTxtDisplay;
         //ImageView mImageView;
-        mTxtDisplay = (TextView) findViewById(R.id.textView4);
-        String url = "http://127.0.0.1:8000/categories/";
+        //mTxtDisplay = (TextView) findViewById(R.id.textView4);
+        //String url = "http://127.0.0.1:8000/categories/";
 /*
         protected void initSingletons()
     {
@@ -83,7 +83,7 @@ public class LogInActivity extends AppCompatActivity {
                     }
                 });
 
-        //Access the REquestGueue thru singleton class
+        //Access the RequestQueue through singleton class
         MySingleton.getInstance(this).addToRequestQueue(jsObjRequest);
 */
 

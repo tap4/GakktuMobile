@@ -12,7 +12,7 @@
     <string name="logIn_link_button_text">Log In</string>
     <string name="title_activity_survey">SurveyActivity</string>
     <string name="mentor_page_intro"> This is the Mentor Activity</string>
-    <string name="profile_page_intro_text"> This is your Profile</string>
+    <string name="profile_page_intro_text"> These are your article preferences:</string>
     <string name="survey_question_children">Do you have any children?</string>
     <string name="survey_question_employed">Are you currently employed?</string>
     <string name="survey_question_disabled">Are you (or a family member) disabled?</string>
@@ -27,8 +27,14 @@
     <string name="user_interest_level_employed">1</string>
     <string name="user_interest_level_citizenship">1</string>
     <string name="userProfilePreferences">userProfilePreferences</string>
-    <string name="user_pref_children_text">HELLO WORLD</string>
-    <string name="user_pref_children_label_text">CHILDREN:</string>
+    <string name="user_pref_children_text">neutral</string>
+    <string name="user_pref_employed_text">neutral</string>
+    <string name="user_pref_disabled_text">neutral</string>
+    <string name="user_pref_citizenship_text">neutral</string>
+    <string name="user_pref_children_label_text">Children:</string>
+    <string name="user_pref_employed_label_text">Employee Benefits:</string>
+    <string name="user_pref_disabled_label_text">Disability Benefits:</string>
+    <string name="user_pref_citizenship_label_text">Icelandic Citizenship:</string>
     <string name="title_activity_profile">Profile</string>
 
 

@@ -7,5 +7,9 @@
     <color name="white">#FFF</color>
     <color name="yellow">#FFD700</color>
     <color name="darkGreen">#458B00</color>
+    <color name = "neutral">#1d87da</color>
+    <color name = "low">#DC143C</color>
+    <color name = "high">#8fbc8f</color>
+
 
 </resources>

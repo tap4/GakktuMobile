@@ -12,6 +12,7 @@
     tools:context=".ProfileActivity"
     tools:showIn="@layout/activity_profile">
 
+    <!---////////////////////////   Intro Text //////////////////////////////-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,6 +22,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+
+    <!-- ////////////// Label and ValueField for CHILDREN Category ///////////-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,5 +43,80 @@
         android:layout_toRightOf="@+id/user_pref_children_label_view"
         android:layout_below="@+id/profile_page_intro_view"
         />
+
+    <!-- ////////////// Label and ValueField for EMPLOYED Category ///////////-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/user_pref_employed_label_view"
+        android:text="@string/user_pref_employed_label_text"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_pref_children_label_view"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/user_pref_employed_view"
+        android:text="@string/user_pref_employed_text"
+        android:layout_toRightOf="@+id/user_pref_employed_label_view"
+        android:layout_below="@+id/user_pref_children_label_view"
+        />
+
+    <!-- ////////////// Label and ValueField for DISABLED Category ///////////-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/user_pref_disabled_label_view"
+        android:text="@string/user_pref_disabled_label_text"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_pref_employed_label_view"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/user_pref_disabled_view"
+        android:text="@string/user_pref_disabled_text"
+        android:layout_toRightOf="@+id/user_pref_disabled_label_view"
+        android:layout_below="@+id/user_pref_employed_label_view"
+        />
+
+    <!-- ////////////// Label and ValueField for CITIZENSHIP Category ///////////-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/user_pref_citizenship_label_view"
+        android:text="@string/user_pref_citizenship_label_text"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_pref_disabled_label_view"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/user_pref_citizenship_view"
+        android:text="@string/user_pref_citizenship_text"
+        android:layout_toRightOf="@+id/user_pref_citizenship_label_view"
+        android:layout_below="@+id/user_pref_disabled_label_view"
+        />
+
+
+    <!--Fragment for Navigation Bar-->
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.example.troyporter.troysfirstapp.NavigationBarFragment"
+        android:id="@+id/fragment2"
+        tools:layout="@layout/navigation_bar_fragment"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="119dp" />
 
 </RelativeLayout>
